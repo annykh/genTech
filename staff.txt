@@ -10,7 +10,7 @@ CREATE TABLE Staff (
 
 INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUES 
         ('Anna'
-        , 'Khachaturyan'
+        , 'Daniels'
         , 'Senior Teacher'
         , 22
         , 'N'
