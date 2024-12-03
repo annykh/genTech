@@ -5,7 +5,7 @@ CREATE TABLE Staff (
     position VARCHAR(128),
     age INTEGER,
     has_child CHAR(1),
-    username VARCHAR(128) unique
+    username VARCHAR(128)
   );
 
 INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUES 
@@ -31,7 +31,7 @@ INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUE
         , 'Junior Web Developer'
         , 40
         , 'Y'
-        , 'billt1'
+        , null
         );        
 INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUES 
         ('Lily'
@@ -79,7 +79,7 @@ INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUE
         , 'Senior Teacher'
         , 25
         , 'Y'
-        , 'lilychen'
+        , null
         );        
 INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUES 
         ('Anna'
@@ -167,7 +167,7 @@ INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUE
         , 'Senior UX Designer'
         , 31
         , 'N'
-        , 'annlo1'
+        , null
         );   
 INSERT INTO Staff(firstname, lastname, position, age, has_child, username) VALUES 
         ('Ashley'
