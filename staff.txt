@@ -1,6 +1,3 @@
-CREATE DATABASE summary5;
-USE summary5;
-
 CREATE TABLE Staff (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(64) NOT NULL,
