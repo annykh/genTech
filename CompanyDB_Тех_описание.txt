@@ -1,0 +1,32 @@
+1. Описание структуры базы данных
+  База данных CompanyDB предназначена для хранения информации о сотрудниках, департаментах, проектах и их участии в проектах.
+
+2. Таблицы и их поля
+
+Departments (Департаменты)
+    DepartmentID (INT, PRIMARY KEY) – Уникальный идентификатор департамента.
+    DepartmentName (VARCHAR(100)) – Название департамента.
+
+Employees (Сотрудники)
+    EmployeeID (INT, PRIMARY KEY) – Уникальный идентификатор сотрудника.
+    FirstName (VARCHAR(100)) – Имя сотрудника.
+    LastName (VARCHAR(100)) – Фамилия сотрудника.
+    Salary (DECIMAL(10,2)) – Зарплата сотрудника.
+    DepartmentID (INT, FOREIGN KEY) – Идентификатор департамента, к которому относится сотрудник. Ссылается на Departments(DepartmentID).
+    HireDate (DATE) – Дата найма сотрудника.
+
+Projects (Проекты)
+    ProjectID (INT, PRIMARY KEY) – Уникальный идентификатор проекта.
+    ProjectName (VARCHAR(100)) – Название проекта.
+    Budget (DECIMAL(10,2)) – Бюджет проекта.
+
+EmployeeProjects (Участие сотрудников в проектах)
+    EmployeeID (INT, FOREIGN KEY) – Идентификатор сотрудника. Ссылается на Employees(EmployeeID).
+    ProjectID (INT, FOREIGN KEY) – Идентификатор проекта. Ссылается на Projects(ProjectID).
+    HoursWorked (DECIMAL(5,2)) – Количество отработанных часов на данном проекте.
+
+3. Связи между таблицами
+
+    Employees -> Departments: Один департамент может содержать нескольких сотрудников (один-ко-многим). Связь осуществляется по DepartmentID.
+    EmployeeProjects -> Employees: Один сотрудник может участвовать в нескольких проектах (многие-ко-многим). Связь осуществляется по EmployeeID.
+    EmployeeProjects -> Projects: Один проект может включать нескольких сотрудников (многие-ко-многим). Связь осуществляется по ProjectID.
